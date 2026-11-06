@@ -1,4 +1,4 @@
-Welcome to your new dbt project!
+Welcome to dbt + snowflake project (TPCH_SF1 DATA SET)
 
 ### Using the starter project
 
