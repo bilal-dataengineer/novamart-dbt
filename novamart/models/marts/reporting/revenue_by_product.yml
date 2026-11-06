@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: revenue_by_product
+    description: "Revenue and sales quantity summarized by product."
+
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        data_tests:
+          - not_null
+
+      - name: total_quantity_sold
+        data_tests:
+          - not_null
+
+      - name: total_revenue_before_tax
+        data_tests:
+          - not_null
+
+      - name: total_revenue_with_tax
+        data_tests:
+          - not_null

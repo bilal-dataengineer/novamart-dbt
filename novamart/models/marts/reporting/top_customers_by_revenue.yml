@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: top_customers_by_revenue
+    description: "Top five customers ranked by lifetime revenue."
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_name
+        data_tests:
+          - not_null
+
+      - name: market_segment
+        data_tests:
+          - not_null
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: total_revenue_before_tax
+        data_tests:
+          - not_null
+
+      - name: total_revenue_with_tax
+        data_tests:
+          - not_null
+
+      - name: total_quantity_purchased
+        data_tests:
+          - not_null

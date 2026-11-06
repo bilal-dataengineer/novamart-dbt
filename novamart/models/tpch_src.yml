@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: NOVAMART_RAW
+    schema: TPCH
+    tables:
+      - name: orders
+      - name: lineitem
+      - name: customer
+      - name: nation
+      - name: region
+      - name: part

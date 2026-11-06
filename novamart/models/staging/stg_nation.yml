@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_nation
+    description: "Cleaned staging model for nations."
+
+    columns:
+      - name: nation_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: nation_name
+        data_tests:
+          - unique
+          - not_null
+
+      - name: region_id
+        data_tests:
+          - not_null

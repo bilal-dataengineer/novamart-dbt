@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: revenue_by_region
+    description: "Regional revenue summary for NovaMart."
+
+    columns:
+      - name: region_name
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_revenue_before_tax
+        data_tests:
+          - not_null
+
+      - name: total_revenue_with_tax
+        data_tests:
+          - not_null

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Order-level revenue fact table."
+
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: revenue_before_tax
+        data_tests:
+          - not_null
+
+      - name: revenue_with_tax
+        data_tests:
+          - not_null

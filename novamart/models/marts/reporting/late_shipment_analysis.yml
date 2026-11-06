@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: late_shipment_analysis
+    description: "Order-level analysis of late-shipped line items."
+
+    columns:
+      - name: order_id
+        description: "Identifier of the order containing late shipments."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: late_line_items
+        description: "Number of line items shipped after their committed date."
+        data_tests:
+          - not_null
+
+      - name: days_late
+        description: "Maximum shipment delay in days for the order."
+        data_tests:
+          - not_null
+
+      - name: affected_revenue
+        description: "Revenue including tax from late-shipped line items."
+        data_tests:
+          - not_null

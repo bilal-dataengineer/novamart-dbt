@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: monthly_revenue
+    description: "Monthly revenue by region and nation."
+
+    columns:
+      - name: year
+        data_tests:
+          - not_null
+
+      - name: month
+        data_tests:
+          - not_null
+
+      - name: month_name
+        data_tests:
+          - not_null
+
+      - name: region_name
+        data_tests:
+          - not_null
+
+      - name: nation_name
+        data_tests:
+          - not_null
+
+      - name: total_revenue_before_tax
+        data_tests:
+          - not_null
+
+      - name: total_revenue_with_tax
+        data_tests:
+          - not_null
+
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - year
+              - month
+              - region_name
+              - nation_name

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: "Cleaned staging model for customers."
+
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_name
+        data_tests:
+          - not_null
+
+      - name: nation_id
+        data_tests:
+          - not_null
+
+      - name: market_segment
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  [
+                    "AUTOMOBILE",
+                    "BUILDING",
+                    "FURNITURE",
+                    "HOUSEHOLD",
+                    "MACHINERY",
+                  ]

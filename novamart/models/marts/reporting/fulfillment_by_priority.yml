@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fulfillment_by_priority
+    description: "Average order fulfillment time grouped by order priority."
+
+    columns:
+      - name: order_priority
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: avg_days_order_to_ship
+        data_tests:
+          - not_null
+
+      - name: avg_days_order_to_receipt
+        data_tests:
+          - not_null

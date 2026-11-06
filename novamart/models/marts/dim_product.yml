@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Denormalized product dimension for NovaMart analytics."
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        data_tests:
+          - not_null
+
+      - name: brand
+        data_tests:
+          - not_null
+
+      - name: manufacturer
+        data_tests:
+          - not_null
+
+      - name: product_type
+        data_tests:
+          - not_null
+
+      - name: retail_price
+        data_tests:
+          - not_null
